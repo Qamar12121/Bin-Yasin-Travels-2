@@ -665,8 +665,8 @@ export default function Home() {
                 <h3 className="font-serif text-2xl md:text-3xl font-bold">Contact Information</h3>
                 <div className="space-y-5">
                   {[
-                    { icon: <MapPin className="w-6 h-6 text-primary" />, title: "Our Office", text: "Shop No. 12, Al-Noor Plaza,\nMain GT Road, Gujranwala, Pakistan" },
-                    { icon: <Phone className="w-6 h-6 text-primary" />, title: "Phone", text: "+92 301 8780888" },
+                    { icon: <MapPin className="w-6 h-6 text-primary" />, title: "Our Office", text: "Shop #19x, X-Block, Near Passport Office,\nMadni Chowk, New Multan, Pakistan" },
+                    { icon: <Phone className="w-6 h-6 text-primary" />, title: "Phone", text: "+92 301 8780888\n+92 300 6369313\n+92 305 1633313" },
                     { icon: <Mail className="w-6 h-6 text-primary" />, title: "Email", text: "info@binyasintravels.com" },
                     { icon: <Clock className="w-6 h-6 text-primary" />, title: "Office Hours", text: "Mon–Sat: 9:00 AM – 8:00 PM\nFri: 2:00 PM – 8:00 PM" },
                   ].map((item, i) => (
@@ -686,7 +686,7 @@ export default function Home() {
                 <div className="rounded-xl overflow-hidden border border-border shadow-md">
                   <iframe
                     title="Bin Yasin Travels Location"
-                    src="https://maps.google.com/maps?q=GT+Road+Gujranwala+Pakistan&output=embed&z=15"
+                    src="https://maps.google.com/maps?q=Madni+Chowk+New+Multan+Pakistan&output=embed&z=15"
                     width="100%"
                     height="260"
                     style={{ border: 0 }}
@@ -757,6 +757,8 @@ export default function Home() {
                 </a>
               </div>
               <p className="text-white/70 text-sm">+92 301 8780888</p>
+              <p className="text-white/70 text-sm">+92 300 6369313</p>
+              <p className="text-white/70 text-sm">+92 305 1633313</p>
               <p className="text-white/70 text-sm mt-1">info@binyasintravels.com</p>
             </div>
           </div>
