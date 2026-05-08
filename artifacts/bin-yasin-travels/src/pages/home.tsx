@@ -38,6 +38,11 @@ export default function Home() {
     setTheme(theme === "light" ? "dark" : "light");
   };
 
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <div className="min-h-screen bg-background flex flex-col relative overflow-hidden">
       
@@ -49,14 +54,20 @@ export default function Home() {
           </a>
           
           <nav className="hidden md:flex items-center gap-8">
-            {['About Our Story', 'Gallery', 'Packages', 'Services', 'Contact Us'].map((item) => (
-              <a 
-                key={item} 
-                href={`#${item.toLowerCase().replace(/ /g, '-')}`}
+            {[
+              { label: 'About Our Story', id: 'about-our-story' },
+              { label: 'Gallery', id: 'gallery' },
+              { label: 'Packages', id: 'packages' },
+              { label: 'Services', id: 'services' },
+              { label: 'Contact Us', id: 'contact-us' },
+            ].map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollTo(item.id)}
                 className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors tracking-wide"
               >
-                {item}
-              </a>
+                {item.label}
+              </button>
             ))}
           </nav>
 
@@ -68,7 +79,7 @@ export default function Home() {
             >
               {theme === "light" ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
             </button>
-            <Button className="hidden md:flex bg-primary text-primary-foreground hover:bg-primary/90">
+            <Button onClick={() => scrollTo('contact-us')} className="hidden md:flex bg-primary text-primary-foreground hover:bg-primary/90">
               Book Now
             </Button>
           </div>
@@ -113,10 +124,10 @@ export default function Home() {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 h-14 rounded-none w-full sm:w-auto">
+              <Button size="lg" onClick={() => scrollTo('packages')} className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 h-14 rounded-none w-full sm:w-auto">
                 Explore Packages
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10 text-lg px-8 h-14 rounded-none w-full sm:w-auto">
+              <Button size="lg" variant="outline" onClick={() => scrollTo('contact-us')} className="bg-transparent border-white text-white hover:bg-white/10 text-lg px-8 h-14 rounded-none w-full sm:w-auto">
                 Contact Us
               </Button>
             </div>
@@ -229,7 +240,7 @@ export default function Home() {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full bg-foreground text-background hover:bg-foreground/90 rounded-none h-12">
+                  <Button onClick={() => scrollTo('contact-us')} className="w-full bg-foreground text-background hover:bg-foreground/90 rounded-none h-12">
                     Inquire Now
                   </Button>
                 </div>
@@ -463,11 +474,17 @@ export default function Home() {
             <div>
               <h4 className="font-serif text-xl font-bold mb-6 text-white">Quick Links</h4>
               <ul className="space-y-3">
-                {['About Our Story', 'Gallery', 'Packages', 'Services', 'Contact Us'].map((item) => (
-                  <li key={item}>
-                    <a href={`#${item.toLowerCase().replace(/ /g, '-')}`} className="text-white/70 hover:text-primary transition-colors flex items-center gap-2">
-                      <ChevronRight className="w-4 h-4" /> {item}
-                    </a>
+                {[
+                  { label: 'About Our Story', id: 'about-our-story' },
+                  { label: 'Gallery', id: 'gallery' },
+                  { label: 'Packages', id: 'packages' },
+                  { label: 'Services', id: 'services' },
+                  { label: 'Contact Us', id: 'contact-us' },
+                ].map((item) => (
+                  <li key={item.id}>
+                    <button onClick={() => scrollTo(item.id)} className="text-white/70 hover:text-primary transition-colors flex items-center gap-2">
+                      <ChevronRight className="w-4 h-4" /> {item.label}
+                    </button>
                   </li>
                 ))}
               </ul>

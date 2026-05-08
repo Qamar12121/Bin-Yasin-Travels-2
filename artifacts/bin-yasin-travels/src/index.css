@@ -1,8 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @plugin "@tailwindcss/typography";
-
-@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 @custom-variant dark (&:is(.dark *));
 
@@ -59,7 +58,7 @@
   --radius: 0.75rem;
   
   /* Light Mode - Ivory/Cream with Gold & Emerald accents */
-  --background: 40 33% 98%; /* Creamy ivory #faf9f5 */
+  --background: 0 0% 100%; /* Pure white */
   --foreground: 220 50% 15%; /* Deep navy text */
   --border: 40 20% 90%;
   --input: 40 20% 90%;
