@@ -1,0 +1,62 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "oLHK2DE1Dpw6KMwG3azRk"
+uri = "file://artifacts/bin-yasin-travels/public/images/hero-kaaba.png"
+type = "image"
+title = "Hero Kaaba at night"
+
+[[generated]]
+id = "j0SpdMSRV7pbf28n2icTQ"
+uri = "file://artifacts/bin-yasin-travels/public/images/ceo-portrait.png"
+type = "image"
+title = "CEO Portrait"
+
+[[generated]]
+id = "0TtdkJVWqWoeDp2GNgEJp"
+uri = "file://artifacts/bin-yasin-travels/public/images/dest-makkah.png"
+type = "image"
+title = "Destination Makkah"
+
+[[generated]]
+id = "Vs8qiytfsEM2dVWsrkuYZ"
+uri = "file://artifacts/bin-yasin-travels/public/images/dest-madinah.png"
+type = "image"
+title = "Destination Madinah"
+
+[[generated]]
+id = "3V4fWLx9ZJOANzQJRORfA"
+uri = "file://artifacts/bin-yasin-travels/public/images/dest-dubai.png"
+type = "image"
+title = "Destination Dubai"
+
+[[generated]]
+id = "2Rk2Uym9rItSOIdkH2N7s"
+uri = "file://artifacts/bin-yasin-travels/public/images/dest-london.png"
+type = "image"
+title = "Destination London"
+
+[[generated]]
+id = "AebvLOk0nEAMlskl3ZJhn"
+uri = "file://artifacts/bin-yasin-travels/public/images/dest-istanbul.png"
+type = "image"
+title = "Destination Istanbul"
+
+[[generated]]
+id = "dj0m4n9crsXSroEsgLXS-"
+uri = "file://artifacts/bin-yasin-travels/public/images/dest-paris.png"
+type = "image"
+title = "Destination Paris"
+
+[[generated]]
+id = "QTpsiWQrOmqcJN3_rg-ku"
+uri = "file://artifacts/bin-yasin-travels/public/images/gallery-1.png"
+type = "image"
+title = "Gallery Holy Site"
+
+[[generated]]
+id = "WAiZTFKyuqANpTzca8ojG"
+uri = "file://artifacts/bin-yasin-travels/public/images/gallery-2.png"
+type = "image"
+title = "Gallery Airplane"
