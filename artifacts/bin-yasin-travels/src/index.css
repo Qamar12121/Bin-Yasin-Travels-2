@@ -140,3 +140,7 @@
     font-family: var(--font-arabic);
   }
 }
+
+#replit-badge, [data-replit-badge], .replit-ui-theme-root > div[style*="position: fixed"] {
+  display: none !important;
+}
