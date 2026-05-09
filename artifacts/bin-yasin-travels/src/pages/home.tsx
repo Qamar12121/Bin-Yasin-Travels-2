@@ -431,6 +431,21 @@ export default function Home() {
                 </Button>
               </motion.div>
             </motion.div>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.1 }}
+              className="flex items-center justify-center mt-8"
+            >
+              <div className="flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-5 py-2.5">
+                <div className="w-7 h-7 bg-blue-500 rounded-full flex items-center justify-center shrink-0">
+                  <Shield className="w-4 h-4 text-white" />
+                </div>
+                <div className="text-left">
+                  <p className="text-white text-xs font-black tracking-widest uppercase leading-none">IATA</p>
+                  <p className="text-white/70 text-[10px] tracking-wider leading-none mt-0.5">Verified Member</p>
+                </div>
+                <div className="w-px h-6 bg-white/20 mx-1" />
+                <p className="text-white/80 text-xs font-medium">International Air Transport Association</p>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
 
@@ -568,6 +583,9 @@ export default function Home() {
                       <CheckCircle2 className="w-3.5 h-3.5" /> {badge}
                     </span>
                   ))}
+                  <span className="inline-flex items-center gap-1.5 bg-blue-500/20 border border-blue-400/40 text-blue-300 rounded-full px-4 py-1.5 text-xs font-bold">
+                    <Shield className="w-3.5 h-3.5" /> IATA Verified
+                  </span>
                 </div>
               </motion.div>
             </div>
