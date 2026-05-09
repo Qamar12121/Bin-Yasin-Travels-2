@@ -96,14 +96,14 @@ const Logo = () => (
 
 /* ── Booking Modal ── */
 const ALL_SERVICES = [
-  { label: "Silver Package — PKR 1,85,000", value: "Silver Package" },
-  { label: "Gold Package — PKR 2,65,000", value: "Gold Package" },
-  { label: "Platinum VIP — PKR 3,90,000", value: "Platinum VIP" },
+  { label: "Silver Package — PKR 250,000", value: "Silver Package" },
+  { label: "Gold Package — PKR 310,000", value: "Gold Package" },
+  { label: "Platinum VIP — PKR 450,000", value: "Platinum VIP" },
   { label: "Hajj Services", value: "Hajj Services" },
   { label: "Worldwide Ticketing", value: "Worldwide Ticketing" },
   { label: "UAE Visit Visa", value: "UAE Visit Visa" },
-  { label: "UK Visit Visa", value: "UK Visit Visa" },
-  { label: "Schengen Visa", value: "Schengen Visa" },
+  { label: "Malaysia Visit Visa", value: "Malaysia Visit Visa" },
+  { label: "Kuwait Visit Visa", value: "Kuwait Visit Visa" },
   { label: "Saudi Arabia Visa", value: "Saudi Arabia Visa" },
   { label: "General Inquiry", value: "General Inquiry" },
 ];
@@ -664,8 +664,8 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 { name: "UAE Visit Visa", desc: "30 / 60  days", price: "PKR 310,000", img: "/images/dest-dubai.png" },
-                { name: "Malaysia Visit Visa", desc: "Single / Multiple Entry", price: "PKR 18,000", img: "/images/dest-malaysia.jpg" },
-                { name: "Kuwait Visit Visa", desc: "Single / Multiple Entry", price: "PKR 22,000", img: "/images/dest-kuwait.jpg" },
+                { name: "Malaysia Visit Visa", desc: "Single ", price: "PKR 190,000", img: "/images/dest-malaysia.jpg" },
+                { name: "Kuwait Visit Visa", desc: "Single ", price: "PKR 210,000", img: "/images/dest-kuwait.jpg" },
                 { name: "Saudi Arabia Visa", desc: "Single Entry", price: "PKR 90,000", img: "/images/dest-makkah.png" }
               ].map((visa, i) => (
                 <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
