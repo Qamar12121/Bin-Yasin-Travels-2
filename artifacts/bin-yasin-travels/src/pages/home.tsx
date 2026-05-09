@@ -80,8 +80,17 @@ function Orb({ style }: { style: React.CSSProperties }) {
 
 /* ── Logo ── */
 const Logo = () => (
-  <div className="flex items-center">
-    <img src="/images/logo.png" alt="Bin Yasin Travels" className="h-14 w-auto object-contain" />
+  <div className="flex items-center gap-2.5">
+    <img
+      src="/images/logo.png"
+      alt="Bin Yasin Travels"
+      className="h-12 w-auto object-contain"
+      style={{ filter: "drop-shadow(0 0 6px hsl(var(--primary)/0.5)) saturate(1.4) brightness(1.05)" }}
+    />
+    <div className="flex flex-col">
+      <span className="font-serif font-bold text-xl leading-none tracking-wide text-foreground">Bin Yasin</span>
+      <span className="text-[0.65rem] tracking-[0.2em] uppercase text-primary font-semibold">Travels</span>
+    </div>
   </div>
 );
 
