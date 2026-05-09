@@ -663,10 +663,10 @@ export default function Home() {
             </motion.div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { name: "UAE Visit Visa", desc: "30 / 60 / 90 days", price: "PKR 25,000", img: "/images/dest-dubai.png" },
-                { name: "Malaysia Visit Visa", desc: "Single / Multiple Entry", price: "PKR 18,000", img: "/images/dest-istanbul.png" },
-                { name: "Kuwait Visit Visa", desc: "Single / Multiple Entry", price: "PKR 22,000", img: "/images/dest-madinah.png" },
-                { name: "Saudi Arabia Visa", desc: "Multiple Entry", price: "PKR 20,000", img: "/images/dest-makkah.png" }
+                { name: "UAE Visit Visa", desc: "30 / 60  days", price: "PKR 310,000", img: "/images/dest-dubai.png" },
+                { name: "Malaysia Visit Visa", desc: "Single / Multiple Entry", price: "PKR 18,000", img: "/images/dest-malaysia.jpg" },
+                { name: "Kuwait Visit Visa", desc: "Single Entry ", price: "PKR ,000", img: "/images/dest-madinah.png" },
+                { name: "Saudi Arabia Visa", desc: "Single Entry", price: "PKR 90,000", img: "/images/dest-makkah.png" }
               ].map((visa, i) => (
                 <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }} transition={{ delay: i * 0.1 }}
