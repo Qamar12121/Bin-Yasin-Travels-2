@@ -85,7 +85,7 @@ const Logo = () => (
       src="/images/logo.png"
       alt="Bin Yasin Travels"
       className="h-12 w-auto object-contain"
-      style={{ filter: "drop-shadow(0 0 6px hsl(var(--primary)/0.5)) saturate(1.4) brightness(1.05)" }}
+      style={{ filter: "sepia(0.9) saturate(2.8) hue-rotate(8deg) brightness(1.05) drop-shadow(0 2px 10px rgba(212,175,55,0.45))" }}
     />
     <div className="flex flex-col">
       <span className="font-serif font-bold text-xl leading-none tracking-wide text-foreground">Bin Yasin</span>
