@@ -397,15 +397,11 @@ export default function Home() {
 
         <div className="container relative z-20 px-4 text-center mt-16">
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
-              className="flex items-center justify-center gap-3 mb-5"
+            <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
+              className="text-primary font-semibold tracking-[0.3em] uppercase mb-5 text-sm"
             >
-              <p className="text-primary font-semibold tracking-[0.3em] uppercase text-sm">✦ Bin Yasin Travels ✦</p>
-              <div className="flex items-center gap-1 bg-blue-500/20 border border-blue-400/30 backdrop-blur-sm rounded-full px-2.5 py-1">
-                <Shield className="w-3 h-3 text-blue-300" />
-                <span className="text-blue-200 text-[10px] font-black tracking-widest uppercase">IATA</span>
-              </div>
-            </motion.div>
+              ✦ Bin Yasin Travels ✦
+            </motion.p>
             <motion.h1 initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.8 }}
               className="font-arabic text-4xl sm:text-6xl md:text-7xl lg:text-[5.5rem] text-white mb-6 font-bold leading-tight"
               style={{ textShadow: "0 0 40px rgba(201,168,76,0.4), 0 4px 20px rgba(0,0,0,0.5)" }}
@@ -434,21 +430,6 @@ export default function Home() {
                   Book Now
                 </Button>
               </motion.div>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.1 }}
-              className="flex items-center justify-center mt-8"
-            >
-              <div className="flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-5 py-2.5">
-                <div className="w-7 h-7 bg-blue-500 rounded-full flex items-center justify-center shrink-0">
-                  <Shield className="w-4 h-4 text-white" />
-                </div>
-                <div className="text-left">
-                  <p className="text-white text-xs font-black tracking-widest uppercase leading-none">IATA</p>
-                  <p className="text-white/70 text-[10px] tracking-wider leading-none mt-0.5">Verified Member</p>
-                </div>
-                <div className="w-px h-6 bg-white/20 mx-1" />
-                <p className="text-white/80 text-xs font-medium">International Air Transport Association</p>
-              </div>
             </motion.div>
           </motion.div>
         </div>
@@ -587,9 +568,6 @@ export default function Home() {
                       <CheckCircle2 className="w-3.5 h-3.5" /> {badge}
                     </span>
                   ))}
-                  <span className="inline-flex items-center gap-1.5 bg-blue-500/20 border border-blue-400/40 text-blue-300 rounded-full px-4 py-1.5 text-xs font-bold">
-                    <Shield className="w-3.5 h-3.5" /> IATA Verified
-                  </span>
                 </div>
               </motion.div>
             </div>
