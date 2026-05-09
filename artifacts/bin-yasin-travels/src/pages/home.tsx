@@ -80,15 +80,8 @@ function Orb({ style }: { style: React.CSSProperties }) {
 
 /* ── Logo ── */
 const Logo = () => (
-  <div className="flex items-center gap-2">
-    <svg width="40" height="40" viewBox="0 0 100 100" fill="none">
-      <path d="M50 10C27.9086 10 10 27.9086 10 50C10 72.0914 27.9086 90 50 90C67.6596 90 82.6517 78.5529 88.0827 62.5C85.5492 63.313 82.8252 63.75 80 63.75C60.67 63.75 45 48.08 45 28.75C45 20.0076 48.188 12.0088 53.4079 5.86435C52.2872 5.72266 51.1494 5.64917 50 5.64917V10Z" fill="currentColor" className="text-primary" />
-      <path d="M60 40 L90 20 L95 25 L75 50 L85 80 L75 85 L60 60 L40 60 L20 80 L15 75 L35 45 L25 20 L30 15 L50 35 L60 40Z" fill="hsl(var(--secondary))" opacity="0.9" />
-    </svg>
-    <div className="flex flex-col">
-      <span className="font-serif font-bold text-xl leading-none tracking-wide text-foreground">Bin Yasin</span>
-      <span className="text-[0.65rem] tracking-[0.2em] uppercase text-primary font-semibold">Travels</span>
-    </div>
+  <div className="flex items-center">
+    <img src="/images/logo.png" alt="Bin Yasin Travels" className="h-14 w-auto object-contain" />
   </div>
 );
 
@@ -593,9 +586,9 @@ export default function Home() {
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
               {[
-                { name: "Silver Package", price: "PKR 1,85,000", features: ["Economy flights", "3-star hotel", "10 nights stay", "Guided Ziyarat"], color: "from-slate-400 to-slate-500" },
-                { name: "Gold Package", price: "PKR 2,65,000", features: ["Business class option", "4-star hotel", "14 nights stay", "Full Ziyarat", "Dedicated guide"], featured: true, color: "from-yellow-400 to-amber-500" },
-                { name: "Platinum VIP", price: "PKR 3,90,000", features: ["Business class included", "5-star hotel", "21 nights stay", "Private guide", "VIP lounge access"], color: "from-violet-400 to-purple-500" }
+                { name: "Silver Package", price: "PKR 250,000", features: ["Economy flights", "3-star hotel", "20 nights stay", "Guided Ziyarat"], color: "from-slate-400 to-slate-500" },
+                { name: "Gold Package", price: "PKR 310,000", features: ["Business class option", "4-star hotel", "20 nights stay", , "Dedicated guide"], featured: true, color: "from-yellow-400 to-amber-500" },
+                { name: "Platinum VIP", price: "PKR 450,000", features: ["Business class included", "5-star hotel", "21 nights stay", "Private guide", "VIP lounge access"], color: "from-violet-400 to-purple-500" }
               ].map((pkg, i) => (
                 <motion.div key={i} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }} transition={{ delay: i * 0.15 }}
@@ -870,7 +863,7 @@ export default function Home() {
                   {[
                     { icon: <MapPin className="w-5 h-5 text-primary" />, title: "Our Office", text: "Shop #19x, X-Block, Near Passport Office,\nMadni Chowk, New Multan, Pakistan" },
                     { icon: <Phone className="w-5 h-5 text-primary" />, title: "Phone Numbers", text: "+92 301 8780888\n+92 300 6369313\n+92 305 1633313" },
-                    { icon: <Mail className="w-5 h-5 text-primary" />, title: "Email", text: "info@binyasintravels.com" },
+                    { icon: <Mail className="w-5 h-5 text-primary" />, title: "Email", text: "binyasintravels@gmail.com" },
                     { icon: <Clock className="w-5 h-5 text-primary" />, title: "Office Hours", text: "Mon–Sat: 9:00 AM – 8:00 PM\nFri: 2:00 PM – 8:00 PM" },
                   ].map((item, i) => (
                     <motion.div key={i} initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }}
@@ -961,7 +954,7 @@ export default function Home() {
                     className="block text-white/60 hover:text-primary transition-colors text-sm"
                   >{n}</a>
                 ))}
-                <p className="text-white/60 text-sm pt-1">info@binyasintravels.com</p>
+                <p className="text-white/60 text-sm pt-1">binyasintravels@gmail.com</p>
               </div>
             </div>
           </div>
