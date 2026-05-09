@@ -536,7 +536,7 @@ export default function Home() {
                   <div className="relative max-w-sm mx-auto lg:max-w-none">
                     <div className="absolute -inset-3 bg-gradient-to-br from-primary/30 to-transparent rounded-2xl blur-xl" />
                     <div className="absolute -inset-1 border border-primary/40 rounded-2xl" />
-                    <img src="/images/ceo-portrait.png" alt="Ghulam Yasin, CEO"
+                    <img src="/images/ceo-portrait.jpg" alt="Ghulam Yasin, CEO"
                       className="relative z-10 w-full aspect-[3/4] object-cover rounded-2xl shadow-2xl"
                     />
                     <div className="absolute bottom-6 left-6 right-6 z-20 bg-black/60 backdrop-blur-md rounded-xl p-4 border border-white/10">
