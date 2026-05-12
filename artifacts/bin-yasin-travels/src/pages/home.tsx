@@ -6,7 +6,8 @@ import {
 } from "framer-motion";
 import {
   Moon, Sun, MapPin, Phone, Mail, Clock, ChevronRight,
-  CheckCircle2, Plane, Globe, Shield, HeartHandshake, X, Menu, Star
+  CheckCircle2, Plane, Globe, Shield, HeartHandshake, X, Menu, Star,
+  Award, Users, TrendingUp, Gem
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -446,27 +447,48 @@ export default function Home() {
         </motion.div>
       </section>
 
+      {/* ── MARQUEE TICKER ── */}
+      <div className="bg-primary/95 py-3 overflow-hidden relative border-y border-primary">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary pointer-events-none z-10" style={{ background: "linear-gradient(90deg, hsl(var(--primary)) 0%, transparent 8%, transparent 92%, hsl(var(--primary)) 100%)" }} />
+        <div className="animate-marquee">
+          {[...Array(2)].map((_, repeat) => (
+            <div key={repeat} className="flex items-center gap-0">
+              {["✦ IATA Verified Member", "✦ 15+ Years of Excellence", "✦ 10,000+ Happy Pilgrims", "✦ Licensed & Trusted", "✦ Premium Umrah Packages", "✦ Worldwide Air Ticketing", "✦ Saudi Arabia Visa", "✦ UAE Visit Visa", "✦ Malaysia Visa", "✦ Kuwait Visa", "✦ Hajj Services", "✦ 24/7 Customer Support"].map((item, i) => (
+                <span key={i} className="flex items-center gap-6 px-8 text-primary-foreground font-semibold text-xs tracking-[0.15em] uppercase whitespace-nowrap">
+                  {item}
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* ── STATS BAR ── */}
-      <section className="py-10 bg-secondary relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10"
-          style={{ backgroundImage: "radial-gradient(circle at 30% 50%, hsl(var(--primary)) 0%, transparent 50%)" }}
+      <section className="py-14 bg-secondary relative overflow-hidden">
+        <div className="absolute inset-0"
+          style={{ backgroundImage: "radial-gradient(ellipse at 20% 50%, hsl(var(--primary)/0.12) 0%, transparent 60%), radial-gradient(ellipse at 80% 50%, hsl(var(--primary)/0.08) 0%, transparent 60%)" }}
         />
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-0 text-center text-white divide-x divide-white/10">
             {[
-              { n: 15, s: "+", label: "Years Experience" },
-              { n: 10000, s: "+", label: "Happy Pilgrims" },
-              { n: 50, s: "+", label: "Destinations" },
-              { n: 99, s: "%", label: "Client Satisfaction" },
+              { n: 15, s: "+", label: "Years Experience", icon: <Award className="w-6 h-6 text-primary" /> },
+              { n: 10000, s: "+", label: "Happy Pilgrims", icon: <Users className="w-6 h-6 text-primary" /> },
+              { n: 50, s: "+", label: "Destinations", icon: <Globe className="w-6 h-6 text-primary" /> },
+              { n: 99, s: "%", label: "Client Satisfaction", icon: <TrendingUp className="w-6 h-6 text-primary" /> },
             ].map((stat, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-                className="space-y-1"
+                className="flex flex-col items-center gap-2 py-4 px-6"
               >
-                <div className="text-4xl md:text-5xl font-bold text-primary font-serif">
+                <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center mb-1">
+                  {stat.icon}
+                </div>
+                <div className="text-4xl md:text-5xl font-bold text-primary font-serif leading-none">
                   <Counter target={stat.n} suffix={stat.s} />
                 </div>
-                <p className="text-white/70 text-sm font-medium tracking-wide">{stat.label}</p>
+                <p className="text-white/60 text-xs font-semibold tracking-[0.15em] uppercase">{stat.label}</p>
               </motion.div>
             ))}
           </div>
@@ -492,28 +514,30 @@ export default function Home() {
             </motion.div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { title: "Umrah Packages", desc: "Spiritual journeys to the Holy Land, all-inclusive luxury.", icon: <HeartHandshake className="w-10 h-10 text-primary" />, color: "from-amber-500/10 to-yellow-500/5" },
-                { title: "Hajj Services", desc: "Complete Hajj facilitation with guided, dedicated support.", icon: <Shield className="w-10 h-10 text-primary" />, color: "from-emerald-500/10 to-green-500/5" },
-                { title: "Worldwide Ticketing", desc: "Premium air tickets to 190+ destinations globally.", icon: <Plane className="w-10 h-10 text-primary" />, color: "from-blue-500/10 to-sky-500/5" },
-                { title: "Visa Processing", desc: "Hassle-free visa services for UAE, UK, Schengen, and USA.", icon: <Globe className="w-10 h-10 text-primary" />, color: "from-purple-500/10 to-violet-500/5" }
+                { title: "Umrah Packages", desc: "Spiritual journeys to the Holy Land, all-inclusive luxury with expert guidance.", icon: <HeartHandshake className="w-10 h-10 text-primary" />, num: "01", accent: "from-amber-500/15 to-yellow-500/5", glow: "hover:shadow-amber-500/10" },
+                { title: "Hajj Services", desc: "Complete Hajj facilitation with dedicated guides and premium accommodation.", icon: <Shield className="w-10 h-10 text-primary" />, num: "02", accent: "from-emerald-500/15 to-green-500/5", glow: "hover:shadow-emerald-500/10" },
+                { title: "Worldwide Ticketing", desc: "Premium air tickets to 190+ destinations at competitive prices worldwide.", icon: <Plane className="w-10 h-10 text-primary" />, num: "03", accent: "from-blue-500/15 to-sky-500/5", glow: "hover:shadow-blue-500/10" },
+                { title: "Visa Processing", desc: "Hassle-free visa services for UAE, Saudi Arabia, Malaysia, Kuwait & more.", icon: <Globe className="w-10 h-10 text-primary" />, num: "04", accent: "from-purple-500/15 to-violet-500/5", glow: "hover:shadow-purple-500/10" }
               ].map((service, i) => (
                 <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                  viewport={{ once: true }} transition={{ delay: i * 0.12 }}
                 >
                   <TiltCard className="h-full">
                     <div
                       onClick={() => open(service.title)}
-                      className={`h-full p-8 border border-border/60 bg-gradient-to-br ${service.color} backdrop-blur-sm rounded-2xl cursor-pointer group hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300`}
+                      className={`h-full p-8 border border-border/40 bg-gradient-to-br ${service.accent} backdrop-blur-sm rounded-2xl cursor-pointer group hover:border-primary/60 hover:shadow-2xl ${service.glow} transition-all duration-500 relative overflow-hidden card-gold-border`}
                     >
-                      <motion.div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors"
-                        whileHover={{ rotate: [0, -10, 10, 0] }} transition={{ duration: 0.4 }}
+                      <div className="absolute top-4 right-4 font-serif text-5xl font-black text-foreground/5 group-hover:text-primary/8 transition-colors select-none leading-none">{service.num}</div>
+                      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <motion.div className="w-16 h-16 bg-primary/10 border border-primary/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/20 group-hover:border-primary/40 transition-all duration-300"
+                        whileHover={{ rotate: [0, -8, 8, 0] }} transition={{ duration: 0.5 }}
                       >
                         {service.icon}
                       </motion.div>
-                      <h3 className="font-serif text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">{service.title}</h3>
+                      <h3 className="font-serif text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-300">{service.title}</h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">{service.desc}</p>
-                      <div className="mt-5 flex items-center gap-2 text-primary text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
-                        Book Now <ChevronRight className="w-3.5 h-3.5" />
+                      <div className="mt-6 flex items-center gap-2 text-primary text-xs font-bold tracking-wider uppercase opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-1 group-hover:translate-y-0">
+                        Enquire Now <ChevronRight className="w-3.5 h-3.5" />
                       </div>
                     </div>
                   </TiltCard>
@@ -909,8 +933,10 @@ export default function Home() {
 
       {/* ── FOOTER ── */}
       <footer className="bg-secondary text-white pt-16 pb-8 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5"
-          style={{ backgroundImage: "radial-gradient(ellipse at 20% 50%, hsl(var(--primary)) 0%, transparent 50%)" }}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
+        <div className="absolute top-1 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+        <div className="absolute inset-0 opacity-8"
+          style={{ backgroundImage: "radial-gradient(ellipse at 15% 80%, hsl(var(--primary)/0.15) 0%, transparent 50%), radial-gradient(ellipse at 85% 20%, hsl(var(--primary)/0.08) 0%, transparent 50%)" }}
         />
         <div className="container mx-auto px-4 md:px-6 relative">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
